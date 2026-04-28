@@ -1,0 +1,77 @@
+  <catalog>
+  <extraction_date><![CDATA[Friday, 24 April 2026, 10:47:28.901 AM]]></extraction_date>
+  <language>PT</language>
+
+  <indicator id="0000164">
+        <theme><![CDATA[Agricultura, floresta e pescas]]></theme>
+        <subtheme><![CDATA[Balanços de aprovisionamento]]></subtheme>
+  <keywords>INE,<![CDATA[Grau]]>,<![CDATA[autoaprovisionamento]]></keywords>
+  <title><![CDATA[Grau de autoaprovisionamento de frutos (%)]]></title>
+  <varcd><![CDATA[0000164]]></varcd>
+  <description><![CDATA[Grau de autoaprovisionamento de frutos (%) por Espécie frutícola; Anual]]></description>
+  <geo_lastlevel><![CDATA[Portugal]]></geo_lastlevel>
+  <dates>
+    <last_period_available><![CDATA[7A2025_1]]></last_period_available>
+    <last_update><![CDATA[23-04-2026]]></last_update>
+  </dates>
+  <periodicity><![CDATA[ Anual]]></periodicity>
+  <update_type><![CDATA[A]]></update_type>
+  <html>
+    <bdd_url><![CDATA[https://www.ine.pt/xurl/indx/0000164/PT]]></bdd_url>
+    <metainfo_url><![CDATA[https://www.ine.pt/xurl/metax/0000164/PT]]></metainfo_url>
+  </html>
+  <json>
+    <json_dataset><![CDATA[https://www.ine.pt/ine/json_indicador/pindica.jsp?op=2&varcd=0000164&lang=PT]]></json_dataset>
+    <json_metainfo><![CDATA[https://www.ine.pt/ine/json_indicador/pindicaMeta.jsp?varcd=0000164&lang=PT]]></json_metainfo>
+  </json>
+</indicator>
+
+  <indicator id="0010003">
+        <theme><![CDATA[Economia e Finanças]]></theme>
+        <subtheme><![CDATA[Finanças públicas]]></subtheme>
+  <keywords>INE,<![CDATA[Orçamento]]>,<![CDATA[impostos]]></keywords>
+  <title><![CDATA[Percentagem do orçamento de Estado financiado por impostos cobrados internamente (%)]]></title>
+  <varcd><![CDATA[0010003]]></varcd>
+  <description><![CDATA[Percentagem do orçamento de Estado financiado por impostos cobrados internamente (%); Anual]]></description>
+  <geo_lastlevel><![CDATA[Portugal]]></geo_lastlevel>
+  <dates>
+    <last_period_available><![CDATA[7A2023]]></last_period_available>
+    <last_update><![CDATA[28-12-2022]]></last_update>
+  </dates>
+  <periodicity><![CDATA[ Anual]]></periodicity>
+  <update_type><![CDATA[A]]></update_type>
+  <html>
+    <bdd_url><![CDATA[https://www.ine.pt/xurl/indx/0010003/PT]]></bdd_url>
+    <metainfo_url><![CDATA[https://www.ine.pt/xurl/metax/0010003/PT]]></metainfo_url>
+  </html>
+  <json>
+    <json_dataset><![CDATA[https://www.ine.pt/ine/json_indicador/pindica.jsp?op=2&varcd=0010003&lang=PT]]></json_dataset>
+    <json_metainfo><![CDATA[https://www.ine.pt/ine/json_indicador/pindicaMeta.jsp?varcd=0010003&lang=PT]]></json_metainfo>
+  </json>
+</indicator>
+
+  <indicator id="0008273">
+        <theme><![CDATA[População e condições sociais]]></theme>
+        <subtheme><![CDATA[Estimativas da população]]></subtheme>
+  <keywords>INE,<![CDATA[População]]>,<![CDATA[residente]]></keywords>
+  <title><![CDATA[População residente (N.º)]]></title>
+  <varcd><![CDATA[0008273]]></varcd>
+  <description><![CDATA[População residente (N.º) por Local de residência, Sexo e Grupo etário; Anual]]></description>
+  <geo_lastlevel><![CDATA[Município]]></geo_lastlevel>
+  <dates>
+    <last_period_available><![CDATA[7A2024]]></last_period_available>
+    <last_update><![CDATA[16-06-2025]]></last_update>
+  </dates>
+  <periodicity><![CDATA[ Anual]]></periodicity>
+  <update_type><![CDATA[A]]></update_type>
+  <html>
+    <bdd_url><![CDATA[https://www.ine.pt/xurl/indx/0008273/PT]]></bdd_url>
+    <metainfo_url><![CDATA[https://www.ine.pt/xurl/metax/0008273/PT]]></metainfo_url>
+  </html>
+  <json>
+    <json_dataset><![CDATA[https://www.ine.pt/ine/json_indicador/pindica.jsp?op=2&varcd=0008273&lang=PT]]></json_dataset>
+    <json_metainfo><![CDATA[https://www.ine.pt/ine/json_indicador/pindicaMeta.jsp?varcd=0008273&lang=PT]]></json_metainfo>
+  </json>
+</indicator>
+
+</catalog>
