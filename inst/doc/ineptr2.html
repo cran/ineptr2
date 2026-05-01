@@ -346,7 +346,7 @@ client, exploring an indicator, and fetching data.</p>
 <div id="install-and-load" class="section level2">
 <h2>Install and load</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># From GitHub</span></span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;c-matos/ineptr2&quot;</span>)</span></code></pre></div>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ineptr2&quot;</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">library</span>(ineptr2)</span></code></pre></div>
 </div>
 <div id="create-a-client" class="section level2">
@@ -448,20 +448,20 @@ with filters to see how they reduce the number of chunks:</p>
 downloads and processes in one step:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> ine<span class="sc">$</span><span class="fu">get_data</span>(<span class="st">&quot;0008273&quot;</span>, <span class="at">dim1 =</span> <span class="st">&quot;S7A2023&quot;</span>, <span class="at">dim2 =</span> <span class="fu">c</span>(<span class="st">&quot;PT&quot;</span>, <span class="st">&quot;1&quot;</span>, <span class="st">&quot;2&quot;</span>, <span class="st">&quot;3&quot;</span>))</span>
 <span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="fu">head</span>(df)</span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="co">#&gt;   dim_1 geocod                     geodsg dim_3 dim_3_t dim_4           dim_4_t</span></span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="co">#&gt; 1  2023      2 Região Autónoma dos Açores     1       M    92 85 and more years</span></span>
-<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="co">#&gt; 2  2023      3 Região Autónoma da Madeira     1       M    92 85 and more years</span></span>
-<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="co">#&gt; 3  2023      2 Região Autónoma dos Açores     1       M    91     80 - 84 years</span></span>
-<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="co">#&gt; 4  2023      3 Região Autónoma da Madeira     1       M    91     80 - 84 years</span></span>
-<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a><span class="co">#&gt; 5  2023      2 Região Autónoma dos Açores     2       F    91     80 - 84 years</span></span>
-<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a><span class="co">#&gt; 6  2023      2 Região Autónoma dos Açores     1       M    82     75 - 79 years</span></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="co">#&gt;   dim_1 geocod                     geodsg dim_3 dim_3_t dim_4     dim_4_t</span></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="co">#&gt; 1  2023      3 Região Autónoma da Madeira     1       M    11 0 - 4 years</span></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="co">#&gt; 2  2023      3 Região Autónoma da Madeira     2       F    11 0 - 4 years</span></span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="co">#&gt; 3  2023      3 Região Autónoma da Madeira     T      MF    11 0 - 4 years</span></span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="co">#&gt; 4  2023      3 Região Autónoma da Madeira     1       M    12 5 - 9 years</span></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a><span class="co">#&gt; 5  2023      3 Região Autónoma da Madeira     2       F    12 5 - 9 years</span></span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a><span class="co">#&gt; 6  2023      3 Região Autónoma da Madeira     T      MF    12 5 - 9 years</span></span>
 <span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a><span class="co">#&gt;   ind_string valor</span></span>
-<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a><span class="co">#&gt; 1      1 361  1361</span></span>
-<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a><span class="co">#&gt; 2      1 731  1731</span></span>
-<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a><span class="co">#&gt; 3      1 911  1911</span></span>
-<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a><span class="co">#&gt; 4      2 441  2441</span></span>
-<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a><span class="co">#&gt; 5      3 034  3034</span></span>
-<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a><span class="co">#&gt; 6      3 299  3299</span></span></code></pre></div>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a><span class="co">#&gt; 1      4 819  4819</span></span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a><span class="co">#&gt; 2      4 504  4504</span></span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a><span class="co">#&gt; 3      9 323  9323</span></span>
+<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a><span class="co">#&gt; 4      5 226  5226</span></span>
+<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a><span class="co">#&gt; 5      5 105  5105</span></span>
+<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a><span class="co">#&gt; 6     10 331 10331</span></span></code></pre></div>
 <p>Dimension filters use the <code>categ_cod</code> values from
 <code>get_dim_values()</code>. If you omit a dimension, all values are
 returned.</p>
@@ -471,12 +471,12 @@ returned.</p>
 <p>For large indicators, you may prefer to download first and load
 later. This streams data to disk without holding it in memory:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>ine<span class="sc">$</span>use_cache <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>ine<span class="sc">$</span>cache_dir <span class="ot">&lt;-</span> <span class="st">&quot;C:/R/my_cache_dir&quot;</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>ine<span class="sc">$</span>cache_dir <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="fu">tempdir</span>(), <span class="st">&quot;ineptr2_vignette&quot;</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>ine<span class="sc">$</span><span class="fu">download_data</span>(<span class="st">&quot;0008273&quot;</span>, <span class="at">dim1 =</span> <span class="st">&quot;S7A2023&quot;</span>)</span>
-<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="co">#&gt; Metadata cached at: C:/R/my_cache_dir/ine_0008273_EN_meta.json</span></span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="co">#&gt; Metadata cached at: C:/Users/CARLMA~1/AppData/Local/Temp/RtmpSwr16A/ineptr2_vignette/ine_0008273_EN_meta.json</span></span>
 <span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="co">#&gt; Downloaded chunk 1/1</span></span>
 <span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a><span class="co">#&gt; All 1 chunks downloaded and cached</span></span>
-<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a><span class="co">#&gt; Data downloaded to: C:/R/my_cache_dir/ine_0008273_EN_chunks</span></span></code></pre></div>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a><span class="co">#&gt; Data downloaded to: C:/Users/carlmatos/AppData/Local/Temp/RtmpSwr16A/ineptr2_vignette/ine_0008273_EN_chunks</span></span></code></pre></div>
 <p>If a download is interrupted, calling <code>download_data()</code>
 again resumes from where it left off.</p>
 <p>Load the raw data later (even in a new session):</p>
@@ -518,7 +518,7 @@ Alternatively, provide a specific <code>last_updated</code> date.</p>
 <span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a><span class="co">#&gt; Using cached metadata</span></span>
 <span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a><span class="co">#&gt; [1] TRUE</span></span>
 <span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a>ine<span class="sc">$</span><span class="fu">is_valid</span>(<span class="st">&quot;0000000&quot;</span>)</span>
-<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a><span class="co">#&gt; Metadata cached at: C:/R/my_cache_dir/ine_0000000_EN_meta.json</span></span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a><span class="co">#&gt; Metadata cached at: C:/Users/carlmatos/AppData/Local/Temp/RtmpSwr16A/ineptr2_vignette/ine_0000000_EN_meta.json</span></span>
 <span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
 </div>
 <div id="browse-the-indicator-catalog" class="section level2">
@@ -559,7 +559,7 @@ client’s language setting:</p>
 <span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a><span class="co"># everything</span></span>
 <span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a><span class="co"># </span><span class="al">WARNING</span><span class="co">: This will remove `cache_dir` and all its contents.</span></span>
 <span id="cb18-7"><a href="#cb18-7" tabindex="-1"></a>ine<span class="sc">$</span><span class="fu">clear_cache</span>()</span>
-<span id="cb18-8"><a href="#cb18-8" tabindex="-1"></a><span class="co">#&gt; Cache cleared: C:/R/my_cache_dir</span></span></code></pre></div>
+<span id="cb18-8"><a href="#cb18-8" tabindex="-1"></a><span class="co">#&gt; Cache cleared: C:/Users/carlmatos/AppData/Local/Temp/RtmpSwr16A/ineptr2_vignette</span></span></code></pre></div>
 </div>
 
 

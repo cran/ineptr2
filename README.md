@@ -24,9 +24,9 @@ Working with the API directly can be cumbersome:
 
 - Responses are capped at 1 million returned rows per request. Multiple
   requests may be required for larger indicators.
-- Indicator structure (dimensions, codes, time periods) must previously
-  known or be explored through separate metadata endpoints before you
-  can build a more specific query.
+- Indicator structure (dimensions, codes, time periods) must be
+  previously known or be explored through separate metadata endpoints
+  before you can build a more specific query.
 - There is no built-in way to resume interrupted downloads or avoid
   redundant requests.
 
@@ -52,11 +52,11 @@ response size (from 40k to 1M rows).
 
 ``` r
 # From CRAN
-# install.packages("ineptr2") # Currently waiting publication on CRAN
+install.packages("ineptr2")
 
 # Development version from GitHub
 # install.packages("devtools")
-devtools::install_github("c-matos/ineptr2")
+pak::pak("c-matos/ineptr2")
 ```
 
 ## Quick example

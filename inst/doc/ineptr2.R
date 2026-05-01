@@ -1,7 +1,8 @@
 ## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  eval = identical(Sys.getenv("INEPTR2_BUILD_VIGNETTES"), "true")
 )
 
 ## -----------------------------------------------------------------------------
@@ -41,7 +42,7 @@ head(df)
 
 ## -----------------------------------------------------------------------------
 ine$use_cache <- TRUE
-ine$cache_dir <- "C:/R/my_cache_dir"
+ine$cache_dir <- file.path(tempdir(), "ineptr2_vignette")
 ine$download_data("0008273", dim1 = "S7A2023")
 
 ## -----------------------------------------------------------------------------

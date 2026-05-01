@@ -10,7 +10,8 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  eval = identical(Sys.getenv("INEPTR2_BUILD_VIGNETTES"), "true")
 )
 ```
 
@@ -20,8 +21,7 @@ This article walks through a typical ineptr2 workflow: creating a client, explor
 
 ```r
 # From GitHub
-devtools::install_github("c-matos/ineptr2")
-
+install.packages("ineptr2")
 ```
 
 ```{r}
@@ -104,7 +104,7 @@ For large indicators, you may prefer to download first and load later. This stre
 
 ```{r}
 ine$use_cache <- TRUE
-ine$cache_dir <- "C:/R/my_cache_dir"
+ine$cache_dir <- file.path(tempdir(), "ineptr2_vignette")
 ine$download_data("0008273", dim1 = "S7A2023")
 ```
 
